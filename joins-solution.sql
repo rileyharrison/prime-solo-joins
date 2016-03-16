@@ -6,8 +6,8 @@ SELECT * FROM line_items  JOIN orders ON line_items.order_id = orders.id;
 
 --3 Which warehouses have cheetos?
 SELECT warehouse.warehouse, products.description FROM warehouse
-JOIN warehouse_product ON warehouse.id = warehouse_product.warehouse_id J
-OIN products ON warehouse_product.product_id = products.id WHERE products.description = 'cheetos';
+JOIN warehouse_product ON warehouse.id = warehouse_product.warehouse_id JOIN
+ products ON warehouse_product.product_id = products.id WHERE products.description = 'cheetos';
 
 --4 Which warehouses have diet pepsi?
 
