@@ -20,7 +20,7 @@ JOIN products ON warehouse_product.product_id = products.id WHERE products.descr
 --NOTE: It is OK if those without orders are not included in results.
 SELECT customers.first_name, customers.last_name, COUNT (orders.order_date) AS numberOfOrders
 FROM customers JOIN addresses ON customers.id = addresses.customer_id
-JOIN orders ON addresses.id = orders.address_id GROUP BY customers.id;
+LEFT JOIN orders ON addresses.id = orders.address_id GROUP BY customers.id;
 
 
 --6 How many customers do we have?
